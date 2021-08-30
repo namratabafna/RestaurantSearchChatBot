@@ -1,0 +1,413 @@
+
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: affirm
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: mexican
+  - slot_was_set:
+    - cuisine: mexican
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Delhi
+  - slot_was_set:
+    - location: Delhi
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+  - action: action_search_restaurants
+  - action: utter_goodbye
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: delhi
+  - slot_was_set:
+    - location: delhi
+  - action: action_search_restaurants
+  - action: utter_ask_price_range 
+  - intent: restaurant_search
+  - action: action_search_restaurants
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: delhi
+  - slot_was_set:
+    - location: delhi
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+  - action: action_search_restaurants
+  - action: utter_goodbye
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: delhi
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: delhi
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: delhi
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: Delhi
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: Delhi
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Delhi
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: Delhi
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: Delhi
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Delhi
+  - action: utter_ask_email
+  - action: utter_ask_email
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: mlengineernamrata@gmail.com
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: Delhi
+  - slot_was_set:
+    - location: Delhi
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Delhi
+  - action: utter_ask_email
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: mlengineernamrata@gmail.com
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: italian
+    - location: mumbai
+  - slot_was_set:
+    - cuisine: italian
+  - slot_was_set:
+    - location: mumbai
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+  - action: action_search_restaurants
+  - action: utter_ask_email  
+  - intent: send_email
+    entities:
+    - cust_email: deepakgupta0021@gmail.com
+  - slot_was_set:
+    - cust_email: deepakgupta0021@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: deepakgupta0021@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: deepakgupta0021@gmail.com
+  - intent: affirm
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+  - slot_was_set:
+    - cuisine: chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+  - action: action_search_restaurants
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: bangalore
+  - action: utter_ask_email
+  - intent: send_email
+    entities:
+    - cust_email: mlengineernamrata@gmail.com
+  - slot_was_set:
+    - cust_email: mlengineernamrata@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: mlengineernamrata@gmail.com
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: Mumbai
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+    entities:
+    - price_range: LessThan300
+  - slot_was_set:
+    - price_range: LessThan300
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - price_range: LessThan300
+  - action: utter_ask_email
+  - intent: send_email
+    entities:
+    - cust_email: namratabafna14@gmail.com
+  - slot_was_set:
+    - cust_email: namratabafna14@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: namratabafna14@gmail.com
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+    - location: mumbai
+  - slot_was_set:
+    - cuisine: Italian
+  - slot_was_set:
+    - location: mumbai
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+    entities:
+    - price_range: Three00To700
+  - slot_was_set:
+    - price_range: Three00To700
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: mumbai
+  - slot_was_set:
+    - cuisine: Italian
+  - slot_was_set:
+    - price_range: Three00To700
+  - action: utter_ask_email
+  - intent: send_email
+    entities:
+    - cust_email: namratabafna14@gmail.com
+  - slot_was_set:
+    - cust_email: namratabafna14@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: namratabafna14@gmail.com
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: Italian
+  - slot_was_set:
+    - location: Mumbai
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+    entities:
+    - price_range: MoreThan700
+  - slot_was_set:
+    - price_range: MoreThan700
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: Italian
+  - slot_was_set:
+    - price_range: MoreThan700
+  - action: utter_ask_email
+  - intent: send_email
+    entities:
+    - cust_email: abc@gmail.com
+  - slot_was_set:
+    - cust_email: abc@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: abc@gmail.com
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: bangalore
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: bangalore
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+    entities:
+    - price_range: MoreThan700
+  - slot_was_set:
+    - price_range: MoreThan700
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: bangalore
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - price_range: MoreThan700
+  - action: utter_ask_email
+  - intent: send_email
+    entities:
+    - cust_email: namratabafna14@gmail.com
+  - slot_was_set:
+    - cust_email: namratabafna14@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: namratabafna14@gmail.com
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: Italian
+  - slot_was_set:
+    - location: Mumbai
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+    entities:
+    - price_range: MoreThan700
+  - slot_was_set:
+    - price_range: MoreThan700
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: Italian
+  - slot_was_set:
+    - price_range: MoreThan700
+  - action: utter_ask_email
+  - intent: send_email
+    entities:
+    - cust_email: mlengineernamrata@gmail.com
+  - slot_was_set:
+    - cust_email: mlengineernamrata@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: mlengineernamrata@gmail.com
+  - intent: restaurant_search
+    entities:
+    - cuisine: Mexican
+    - location: Dehi
+  - slot_was_set:
+    - cuisine: Mexican
+  - slot_was_set:
+    - location: Dehi
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Dehi
+  - slot_was_set:
+    - cuisine: Mexican
+  - slot_was_set:
+    - price_range: MoreThan700
+  - action: utter_ask_email
+  - intent: send_email
+    entities:
+    - cust_email: deepakgupta0021@gmail.com
+  - slot_was_set:
+    - cust_email: deepakgupta0021@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: deepakgupta0021@gmail.com
+  - action: utter_goodbye
+  - intent: restaurant_search
+    entities:
+    - cuisine: mexican
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: mexican
+  - slot_was_set:
+    - location: Mumbai
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+    entities:
+    - price_range: LessThan300
+  - slot_was_set:
+    - price_range: LessThan300
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Mumbai
+  - slot_was_set:
+    - cuisine: mexican
+  - slot_was_set:
+    - price_range: LessThan300
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: Delhi
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - location: Delhi
+  - action: utter_ask_price_range
+  - intent: restaurant_search
+    entities:
+    - price_range: MoreThan700
+  - slot_was_set:
+    - price_range: MoreThan700
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Delhi
+  - slot_was_set:
+    - cuisine: chinese
+  - slot_was_set:
+    - price_range: MoreThan700
+  - action: utter_ask_email
+  - intent: send_email
+    entities:
+    - cust_email: deepakgupta0021@gmail.com
+  - slot_was_set:
+    - cust_email: deepakgupta0021@gmail.com
+  - action: action_send_mail
+  - slot_was_set:
+    - cust_email: deepakgupta0021@gmail.com

@@ -1,0 +1,23 @@
+[
+  {
+    "text": "I am looking for some restaurants in Delhi.",
+    "entities": [
+      {
+        "start": 37,
+        "end": 42,
+        "value": "Delhi",
+        "entity": "location"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 37,
+        "end": 43,
+        "confidence_entity": 0.5006737112998962,
+        "value": "Delhi.",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
